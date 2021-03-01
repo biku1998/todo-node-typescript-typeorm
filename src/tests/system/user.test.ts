@@ -1,6 +1,6 @@
 import request from "supertest";
 import { app } from "../../app";
-import { setup } from "../setup/database";
+import { ROUTE_PREFIX, setup } from "../setup/database";
 
 beforeAll(async () => {
   await setup.createConnection();
@@ -14,16 +14,6 @@ beforeEach(async () => {
 afterEach(async () => {
   await setup.flushDatabase();
 });
-
-/*
- * To test
- [x] sign up with invalid data
- [x] sign up with valid data
- [x] login with invalid credentials
- [x] login with valid credentials
-*/
-
-const ROUTE_PREFIX = "/api/v1";
 
 test("should not sign up with invalid data", async () => {
   await request(app)

@@ -2,6 +2,8 @@ import { createConnection, getConnection, getRepository } from "typeorm";
 import { Todo } from "../../models/Todo";
 import { User } from "../../models/User";
 
+export const ROUTE_PREFIX = "/api/v1";
+
 export const setup = {
   async createConnection() {
     await createConnection({
