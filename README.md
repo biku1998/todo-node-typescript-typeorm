@@ -67,7 +67,8 @@ _Note_ i am using a tool called `env-cmd` to manage my dev and test environment 
 1. install postgres or any typeorm supported database.
 2. run the following commands in your database
 
-```psql -U postgres [ in your terminal ]
+```
+psql -U postgres [ in your terminal ]
 
 create database todo;
 create database todo_test;
@@ -79,3 +80,5 @@ grant all privileges on database todo to todo_test;
 3. run `npm install`
 4. start development server `npm start dev`
 5. to run tests `npm test`
+
+#### Feel free to raise issues
